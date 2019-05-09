@@ -51,7 +51,7 @@ namespace Anthem
             }
 
             if (Core.Player.CurrentJob == _jobToLevel &&
-                (Core.Player.ClassLevel >= _jobStartLevel + 5 || Core.Player.ClassLevel >= _maxLevel))
+                (Core.Player.ClassLevel >= _jobStartLevel + _maxLevelDifference || Core.Player.ClassLevel >= _maxLevel))
             {
                 SelectNewJobToLevel();
                 return;
