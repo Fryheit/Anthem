@@ -32,6 +32,9 @@ namespace Anthem
 
         public override void OnPulse()
         {
+            if (!TreeRoot.Current.IsAutonomous)
+                return;
+
             if (!_waitTimer.IsFinished)
                 return;
 
